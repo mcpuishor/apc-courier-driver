@@ -1,0 +1,47 @@
+{
+    "name": "mcpuishor/apc-courier-driver",
+    "description": "APC Overnight (UK) courier driver integration for Hypaship API",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mcpuishor\\ApcCourierDriver\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mcpuishor\\ApcCourierDriver\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robert",
+            "email": "rtudor@palmcentre.co.uk"
+        }
+    ],
+    "require": {
+        "php" : "^8.2",
+        "mcpuishor/courier-manager" : "dev-master",
+        "illuminate/support": "^10.13"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mcpuishor\\ApcCourierDriver\\Providers\\ApcCourierDriverServiceProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../courier-manager",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}
